@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkillBridge — Skills-Based Mentorship &amp; Fellowship Prototype</title>
+    <meta
+      name="description"
+      content="Help displaced professionals turn demonstrated skills into local mentorship and fellowship opportunities, even when formal documents are missing."
+    />
+    <meta property="og:title" content="SkillBridge — Skills-Based Mentorship & Fellowship Prototype" />
+    <meta
+      property="og:description"
+      content="Help displaced professionals turn demonstrated skills into local mentorship and fellowship opportunities, even when formal documents are missing."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('skillbridge_theme_v1');
+          var prefersDark =
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (saved === 'dark' || (!saved && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-[#FAF8F4] text-[#1E2220] dark:bg-[#131615] dark:text-[#F5F2EC] antialiased selection:bg-[#6E1E2E]/15 selection:text-[#6E1E2E] dark:selection:bg-[#E58A9B]/25 dark:selection:text-[#F5F2EC]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

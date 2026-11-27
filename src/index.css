@@ -1,0 +1,129 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-canvas: #FAF8F4;
+  --color-surface: #FFFFFF;
+  --color-surface-muted: #F2EEE7;
+  --color-ink: #1E2220;
+  --color-ink-muted: #525855;
+  --color-border-hairline: #E3DDD2;
+  --color-burgundy: #6E1E2E;
+  --color-burgundy-hover: #561522;
+  --color-teal: #0F6B6E;
+  --color-teal-hover: #0B5254;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-serif);
+    text-wrap: balance;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  :focus-visible {
+    outline: 2px solid #0F6B6E;
+    outline-offset: 2px;
+  }
+
+  html.dark :focus-visible {
+    outline-color: #56C7C4;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media print {
+  @page {
+    margin: 0.65in;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #111111 !important;
+    color-scheme: light !important;
+  }
+
+  header,
+  nav,
+  footer,
+  [aria-label="Prototype disclaimer"],
+  .passport-no-print {
+    display: none !important;
+  }
+
+  main {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .skills-passport-section,
+  .skills-passport-section * {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #111111 !important;
+    box-shadow: none !important;
+  }
+
+  .skills-passport-grid {
+    display: block !important;
+  }
+
+  .skills-passport-summary-card {
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .skills-passport-summary-card > div {
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+  }
+
+  .skills-passport-summary-card div,
+  .skills-passport-summary-card dt,
+  .skills-passport-summary-card dd {
+    border-color: #d4d4d4 !important;
+  }
+
+  .skills-passport-print-header {
+    display: flex !important;
+    align-items: baseline !important;
+    justify-content: space-between !important;
+    border-bottom: 1.5px solid #111111 !important;
+    padding-bottom: 0.75rem !important;
+    margin-bottom: 1.25rem !important;
+  }
+}
+

@@ -1,0 +1,6 @@
+{
+  "name": "SkillBridge",
+  "description": "Turn demonstrated skills into local mentorship and fellowship opportunities for displaced professionals.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
